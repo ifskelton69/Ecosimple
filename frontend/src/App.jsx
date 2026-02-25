@@ -13,26 +13,27 @@ import Noise from "./Pages/Noise";
 import Forest from "./Pages/ForestCover";
 import ParticleBackground from './Components/ParticleBackground';
 import Notifications from "./Pages/notification";
+import PrivateRoute from "./store/privateRoute.js";
 
 const App = () => {
   return (
     <>
-    <ParticleBackground />
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/leaderboard" element={<LeaderBoard />} />
-      <Route path="/knowyourenv" element={<KnowYourEnv />} />    
-      <Route path="/profile" element={<Profile />} /> 
-      <Route path="/aqi" element={<AQI />} />
-      <Route path="/water" element={<Water />} />
-      <Route path="/login"element={<Login />} />
-      <Route path="/signup"element={<Signup />} />
-      <Route path="/form"element={<Form />} />
-      <Route path="/noise"element={<Noise />} />
-      <Route path="/forest"element={<Forest />} />
-      <Route path="/notifications"element={<Notifications />}/>
-    </Routes>
+      <ParticleBackground />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<PrivateRoute><Homepage /></PrivateRoute>} />
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path="/leaderboard" element={<PrivateRoute><LeaderBoard /></PrivateRoute>} />
+        <Route path="/knowyourenv" element={<PrivateRoute><KnowYourEnv /></PrivateRoute>} />
+        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+        <Route path="/aqi" element={<PrivateRoute><AQI /></PrivateRoute>} />
+        <Route path="/water" element={<PrivateRoute><Water /></PrivateRoute>} />
+        <Route path="/form" element={<PrivateRoute><Form /></PrivateRoute>} />
+        <Route path="/noise" element={<PrivateRoute><Noise /></PrivateRoute>} />
+        <Route path="/forest" element={<PrivateRoute><Forest /></PrivateRoute>} />
+        <Route path="/notifications" element={<PrivateRoute><Notifications /></PrivateRoute>} />
+      </Routes>
     </>
   )
 }
