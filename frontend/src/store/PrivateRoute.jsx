@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom"
-import useAuthUser from "../store/useAuthStore"
+import useAuthUser from "./useAuthStore"
 
 const PrivateRoute = ({ children }) => {
   const { authUser, isLoading } = useAuthUser()

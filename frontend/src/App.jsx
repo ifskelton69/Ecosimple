@@ -13,15 +13,16 @@ import Noise from "./Pages/Noise";
 import Forest from "./Pages/ForestCover";
 import ParticleBackground from './Components/ParticleBackground';
 import Notifications from "./Pages/notification";
-import PrivateRoute from "./store/privateRoute.js";
+import PrivateRoute from "./store/PrivateRoute.jsx";
+import PublicRoute from "./store/PublicRoute.jsx";
 
 const App = () => {
   return (
     <>
       <ParticleBackground />
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+        <Route path="/signup" element={<PublicRoute><Signup /></PublicRoute>} />
         <Route path="/" element={<PrivateRoute><Homepage /></PrivateRoute>} />
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
         <Route path="/leaderboard" element={<PrivateRoute><LeaderBoard /></PrivateRoute>} />
