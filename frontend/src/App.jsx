@@ -12,7 +12,7 @@ import Form from "./Pages/Form"
 import Noise from "./Pages/Noise";
 import Forest from "./Pages/ForestCover";
 import ParticleBackground from './Components/ParticleBackground';
-import Notifications from "./Pages/notification";
+import Notifications from "./Pages/Notification";
 import PrivateRoute from "./store/PrivateRoute.jsx";
 import PublicRoute from "./store/PublicRoute.jsx";
 
