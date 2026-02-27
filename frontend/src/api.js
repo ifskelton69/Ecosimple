@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const URL = 'http://localhost:5000/api'
+const URL = 'https://ecosimple-t402.onrender.com/api'
 
 // ─── AQI ──────────────────────────────────────────────
 const getAQI = async (lat = 19.076, lon = 72.877) => {

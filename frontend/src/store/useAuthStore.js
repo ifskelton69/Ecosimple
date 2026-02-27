@@ -11,7 +11,7 @@ const useAuthUser = () => {
     queryFn: async () => {
       const token = localStorage.getItem('token');
       if (!token) return null;
-      const res = await axios.get('http://localhost:5000/api/profile', {
+      const res = await axios.get('https://ecosimple-t402.onrender.com/api/profile', {
   headers: { Authorization: `Bearer ${token}` },
 });
       return res.data;
